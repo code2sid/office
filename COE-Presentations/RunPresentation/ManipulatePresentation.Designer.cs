@@ -45,6 +45,7 @@
             this.ClientSize = new System.Drawing.Size(284, 262);
             this.Name = "ManipulatePresentation";
             this.Text = "ManipulatePresentation";
+            this.Load += new System.EventHandler(this.ManipulatePresentation_Load);
             this.ResumeLayout(false);
 
         }

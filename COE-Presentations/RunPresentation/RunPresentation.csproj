@@ -55,11 +55,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="MPConfigurations.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTimeSharedInput>True</DesignTimeSharedInput>
-      <DependentUpon>MPConfigurations.settings</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="ManipulatePresentation.resx">
       <DependentUpon>ManipulatePresentation.cs</DependentUpon>
     </EmbeddedResource>
@@ -82,10 +77,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="MPConfigurations.settings">
-      <Generator>SettingsSingleFileGenerator</Generator>
-      <LastGenOutput>MPConfigurations.Designer.cs</LastGenOutput>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

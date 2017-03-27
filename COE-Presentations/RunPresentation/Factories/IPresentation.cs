@@ -6,8 +6,16 @@ using System.Threading.Tasks;
 
 namespace ManipulatePresentation.Factories
 {
-    interface IPresentations
+    interface IPresentation
     {
+         string Name { get; set; }
+         string StartDate { get; set; }
+         string EndDate { get; set; }
+         string Days { get; set; }
+         string StartTime { get; set; }
+         string EndTime { get; set; }
+         string Template { get; set; }
+
         void OpenPresentation();
         void GetData();
     }
