@@ -155,7 +155,7 @@
             // 
             // timeStart
             // 
-            this.timeStart.CustomFormat = "HH:mm:ss tt";
+            this.timeStart.CustomFormat = "hh:mm:ss tt";
             this.timeStart.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.timeStart.Location = new System.Drawing.Point(114, 77);
             this.timeStart.Name = "timeStart";
@@ -166,7 +166,7 @@
             // 
             // timeEnd
             // 
-            this.timeEnd.CustomFormat = "HH:mm:ss tt";
+            this.timeEnd.CustomFormat = "hh:mm:ss tt";
             this.timeEnd.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.timeEnd.Location = new System.Drawing.Point(114, 103);
             this.timeEnd.Name = "timeEnd";

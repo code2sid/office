@@ -1,0 +1,39 @@
+<?xml version="1.0" standalone="yes"?>
+<Schedules>
+  <Schedule>
+    <Name>Birthday</Name>
+    <Start>1/1/2017</Start>
+    <Expire>12/31/2017</Expire>
+    <Days>1,2,3,4</Days>
+    <StartTime>10:00:00 AM</StartTime>
+    <EndTime>07:00:00 PM</EndTime>
+    <TemplateFile>C:\COEProjetcs\office\COE-Presentations\RunPresentation\Templates\Bday\BdayTemplate.html</TemplateFile>
+  </Schedule>
+  <Schedule>
+    <Name>Induction</Name>
+    <Start>4/1/2017</Start>
+    <Expire>4/30/2017</Expire>
+    <Days>1,2,3,4,5</Days>
+    <StartTime>10:00:00 AM</StartTime>
+    <EndTime>07:00:00 PM</EndTime>
+    <TemplateFile>Birthday</TemplateFile>
+  </Schedule>
+  <Schedule>
+    <Name>TechTed</Name>
+    <Start>3/23/2017</Start>
+    <Expire>4/8/2017</Expire>
+    <Days>1,2,3,4,5,7</Days>
+    <StartTime>10:00:00 AM</StartTime>
+    <EndTime>06:00:00 PM</EndTime>
+    <TemplateFile>Birthday</TemplateFile>
+  </Schedule>
+  <Schedule>
+    <Name>a</Name>
+    <Start>4/1/2017</Start>
+    <Expire>3/31/2017</Expire>
+    <Days>1,2,3,4,5</Days>
+    <StartTime>10:00:00 AM</StartTime>
+    <EndTime>06:00:00 PM</EndTime>
+    <TemplateFile>C:\COEProjetcs\office\COE-Presentations\RunPresentation\Templates\Bday\BdayTemplate.html</TemplateFile>
+  </Schedule>
+</Schedules>

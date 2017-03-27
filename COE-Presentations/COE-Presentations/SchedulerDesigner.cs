@@ -1,11 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+using System.Configuration;
 using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml;
 
@@ -14,7 +10,7 @@ namespace COE_Presentations
     public partial class SchedulerDesigner : Form
     {
         readonly public DataSet ds = new DataSet();
-        readonly string timeFormat = "HH:mm:ss tt";
+        readonly string timeFormat = "hh:mm:ss tt";
 
         public SchedulerDesigner()
         {
@@ -29,7 +25,8 @@ namespace COE_Presentations
         private void LoadCategories()
         {
             ddlCategory.Items.Clear();
-            ds.ReadXml(System.IO.Path.GetFullPath("SchedulerSettings.xml"));
+            ds.Clear();
+            ds.ReadXml(ConfigurationSettings.AppSettings["configurationfilePath"].ToString());
             ddlCategory.Items.Add("--Select Category--");
             foreach (DataRow dr in ds.Tables[0].Rows)
                 ddlCategory.Items.Add(dr["Name"].ToString());
@@ -40,7 +37,7 @@ namespace COE_Presentations
             if (btnSubmit.Text.Equals("Submit Schedule"))
             {
                 XmlDocument xmlSchedule = new XmlDocument();
-                xmlSchedule.Load(System.IO.Path.GetFullPath("SchedulerSettings.xml"));
+                xmlSchedule.Load(ConfigurationSettings.AppSettings["configurationfilePath"].ToString());
                 XmlElement ParentElement = xmlSchedule.CreateElement("Schedule");
                 XmlElement Name = xmlSchedule.CreateElement("Name"); Name.InnerText = txtCategory.Text;
                 XmlElement Start = xmlSchedule.CreateElement("Start"); Start.InnerText = dtStart.Text;
@@ -57,12 +54,12 @@ namespace COE_Presentations
                 ParentElement.AppendChild(EndTime);
                 ParentElement.AppendChild(TemplateFile);
                 xmlSchedule.DocumentElement.AppendChild(ParentElement);
-                xmlSchedule.Save(System.IO.Path.GetFullPath("SchedulerSettings.xml"));
+                xmlSchedule.Save(ConfigurationSettings.AppSettings["configurationfilePath"].ToString());
             }
             else
             {
                 DataSet ds = new DataSet();
-                ds.ReadXml(System.IO.Path.GetFullPath("SchedulerSettings.xml"));
+                ds.ReadXml(ConfigurationSettings.AppSettings["configurationfilePath"].ToString());
                 int xmlRow = ddlCategory.SelectedIndex - 1;
                 ds.Tables[0].Rows[xmlRow]["Name"] = txtCategory.Text;
                 ds.Tables[0].Rows[xmlRow]["Start"] = dtStart.Text;
@@ -71,7 +68,7 @@ namespace COE_Presentations
                 ds.Tables[0].Rows[xmlRow]["StartTime"] = timeStart.Value.ToString(timeFormat);
                 ds.Tables[0].Rows[xmlRow]["EndTime"] = timeEnd.Value.ToString(timeFormat);
                 ds.Tables[0].Rows[xmlRow]["TemplateFile"] = txtTemplateFile.Text;
-                ds.WriteXml(System.IO.Path.GetFullPath("SchedulerSettings.xml"));
+                ds.WriteXml(ConfigurationSettings.AppSettings["configurationfilePath"].ToString());
             }
             LoadCategories();
         }
