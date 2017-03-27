@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "COE-Presentations", "COE-Presentations\COE-Presentations.csproj", "{0265FFBB-2BCD-414A-B1D4-571901B7DFF2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RunPresentation", "RunPresentation\RunPresentation.csproj", "{01D1299C-06B6-46A1-BA0C-2CF68C7B819F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0265FFBB-2BCD-414A-B1D4-571901B7DFF2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0265FFBB-2BCD-414A-B1D4-571901B7DFF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0265FFBB-2BCD-414A-B1D4-571901B7DFF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0265FFBB-2BCD-414A-B1D4-571901B7DFF2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{01D1299C-06B6-46A1-BA0C-2CF68C7B819F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01D1299C-06B6-46A1-BA0C-2CF68C7B819F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01D1299C-06B6-46A1-BA0C-2CF68C7B819F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01D1299C-06B6-46A1-BA0C-2CF68C7B819F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<Schedules>
+  <Schedule>
+    <Name>Birthday</Name>
+    <Start>1 Jan 2015</Start>
+    <Expire>31 Dec 2015</Expire>
+    <Days>1,2,3,4</Days>
+  </Schedule>
+</Schedules>  
