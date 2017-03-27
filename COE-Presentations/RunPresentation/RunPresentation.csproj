@@ -45,6 +45,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Factories\BirthdayPresentation.cs" />
+    <Compile Include="Factories\InductionPresentation.cs" />
     <Compile Include="Factories\IPresentation.cs" />
     <Compile Include="Factories\PresentationController.cs" />
     <Compile Include="ManipulatePresentation.cs">
