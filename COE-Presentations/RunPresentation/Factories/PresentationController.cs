@@ -25,12 +25,10 @@ namespace ManipulatePresentation.Factories
             var day = dayNo.Where(d => d.Key == DateTime.Today.DayOfWeek.ToString().ToLower()).FirstOrDefault();
             
             var presentations = new List<IPresentation>();
-            /*DataRow[] drs = ds.Tables[0].Select(string.Format("starttime<=#{0}# and endtime>=#{0}# and days in ({1}) and start<=#{2}# and expire>=#{2}#"
+            DataRow[] drs = ds.Tables[0].Select(string.Format("starttime<=#{0}# and endtime>=#{0}# and days like '%{1}%' and start<=#{2}# and expire>=#{2}#"
                                                , DateTime.Now.ToString("HH:mm:ss tt")
                                                , day.Value
-                                               , DateTime.Today.Date));*/
-            //DataRow[] drs = ds.Tables[0].Select("starttime<=#05:19:38 PM# and endtime>=#05:19:38 PM# and days in ('1') and start<=#03/27/2017# and expire>=#03/27/2017#");
-            DataRow[] drs = ds.Tables[0].Select("days in (1)");
+                                               , DateTime.Today.Date));
 
             if (drs.Count() > 0)
             {
