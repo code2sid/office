@@ -23,7 +23,7 @@ namespace ManipulatePresentation.Factories
             var dayNo = new Dictionary<string, int>();
             dayNo.Add("monday", 1); dayNo.Add("tuesday", 1); dayNo.Add("wednesday", 1); dayNo.Add("thursday", 1); dayNo.Add("friday", 1); dayNo.Add("saturday", 1); dayNo.Add("sunday", 1);
             var day = dayNo.Where(d => d.Key == DateTime.Today.DayOfWeek.ToString().ToLower()).FirstOrDefault();
-            
+
             var presentations = new List<IPresentation>();
             DataRow[] drs = ds.Tables[0].Select(string.Format("starttime<=#{0}# and endtime>=#{0}# and days like '%{1}%' and start<=#{2}# and expire>=#{2}#"
                                                , DateTime.Now.ToString("HH:mm:ss tt")
@@ -36,7 +36,19 @@ namespace ManipulatePresentation.Factories
                 {
                     switch (item["Name"].ToString())
                     {
-                        case "Birthday": { presentation = new BirthdayPresentation { Name = drs[0]["Name"].ToString() }; break; }
+                        case "Birthday":
+                            {
+                                presentation = new BirthdayPresentation
+                                {
+                                    Name = drs[0]["Name"].ToString(),
+                                    Template = drs[0]["Template"].ToString(),
+                                    Days = drs[0]["Template"].ToString(),
+                                    StartDate = drs[0]["Template"].ToString(),
+                                    EndDate = drs[0]["Template"].ToString(),
+                                    StartTime = drs[0]["Template"].ToString(),
+                                    EndTime = drs[0]["Template"].ToString()
+                                }; break;
+                            }
                         case "Induction": { break; }
                         case "TechTed": { break; }
                         default:

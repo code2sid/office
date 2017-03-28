@@ -7,7 +7,7 @@
     <Days>1,2,3,4</Days>
     <StartTime>10:00:00 AM</StartTime>
     <EndTime>07:00:00 PM</EndTime>
-    <TemplateFile>C:\COEProjetcs\office\COE-Presentations\RunPresentation\Templates\Bday\BdayTemplate.html</TemplateFile>
+    <TemplateFile>D:\My Content\CodeOffice\office\COE-Presentations\RunPresentation\Templates\Bday\BdayTemplate.html</TemplateFile>
   </Schedule>
   <Schedule>
     <Name>Induction</Name>
